@@ -1,0 +1,19 @@
+image: maven:3.6.3
+
+pipelines:
+  default:
+    - parallel:
+      - step:
+          name: Build and Test
+          caches:
+            - maven
+          script:
+            - mvn -B clean test
+          after-script:
+              # Collect checkstyle, convert to Bitbucket Code Insights
+            - pipe: atlassian/checkstyle-report:0.2.0
+      - step:
+          name: Security Scan
+          script:
+            # see https://bitbucket.org/product/features/pipelines/integrations?&category=security
+            - pipe: atlassian/git-secrets-scan:0.4.3

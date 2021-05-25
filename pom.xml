@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>westmarine.portal</groupId>
+    <artifactId>e2e-automation</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <name>westmarine-e2e-automation</name>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <assertj.version>3.15.0</assertj.version>
+        <allure.version>2.13.6</allure.version>
+        <aspectj.version>1.8.10</aspectj.version>
+        <easy-random.version>4.3.0</easy-random.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>4.4.3</version>
+        </dependency>
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>2.13.8</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.detro.ghostdriver</groupId>
+            <artifactId>phantomjsdriver</artifactId>
+            <version>1.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.16</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-picocontainer</artifactId>
+            <version>5.1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-testng</artifactId>
+            <version>5.7.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>5.7.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-core</artifactId>
+            <version>5.7.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpmime</artifactId>
+            <version>4.5.12</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.spotbugs</groupId>
+            <artifactId>spotbugs-annotations</artifactId>
+            <version>4.0.2</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.141.59</version>
+        </dependency>
+        <dependency>
+            <groupId>org.rythmengine</groupId>
+            <artifactId>rythm-engine</artifactId>
+            <version>1.2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>2.0.1.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+            <version>1.25</version>
+        </dependency>
+        <dependency>
+            <groupId>ru.yandex.qatools.ashot</groupId>
+            <artifactId>ashot</artifactId>
+            <version>1.5.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>${assertj.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jooq</groupId>
+            <artifactId>jooq</artifactId>
+            <version>3.13.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jooq</groupId>
+            <artifactId>jooq-meta</artifactId>
+            <version>3.13.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jooq</groupId>
+            <artifactId>jooq-codegen</artifactId>
+            <version>3.13.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.2.11</version>
+        </dependency>
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20190722</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.13.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.13.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>2.13.2</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-validator</groupId>
+            <artifactId>commons-validator</artifactId>
+            <version>1.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate.javax.persistence</groupId>
+            <artifactId>hibernate-jpa-2.1-api</artifactId>
+            <version>1.0.0.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>6.0.13.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish</groupId>
+            <artifactId>javax.el</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.awaitility</groupId>
+            <artifactId>awaitility</artifactId>
+            <version>4.0.3</version>
+        </dependency>
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-cucumber5-jvm</artifactId>
+            <version>${allure.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-attachments</artifactId>
+            <version>${allure.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.11.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
+            <version>2.11.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jeasy</groupId>
+            <artifactId>easy-random-core</artifactId>
+            <version>${easy-random.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka-clients</artifactId>
+            <version>2.5.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-remote-driver</artifactId>
+            <version>3.8.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.browserstack</groupId>
+            <artifactId>browserstack-local-java</artifactId>
+            <version>1.0.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.aerogear</groupId>
+            <artifactId>aerogear-otp-java</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>io.qameta.allure</groupId>
+                    <artifactId>allure-maven</artifactId>
+                    <version>2.9</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.8.0</version>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                        <annotationProcessors>
+                            <annotationProcessor>lombok.launch.AnnotationProcessorHider$AnnotationProcessor
+                            </annotationProcessor>
+                        </annotationProcessors>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>2.22.1</version>
+                    <configuration>
+                        <testFailureIgnore>false</testFailureIgnore>
+                        <argLine>
+                            -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                        </argLine>
+                        <properties>
+                            <property>
+                                <name>listener</name>
+                                <value>io.qameta.allure.testng.AllureTestNg</value>
+                            </property>
+                        </properties>
+                        <systemPropertyVariables>
+                            <allure.results.directory>${project.build.directory}/allure-results
+                            </allure.results.directory>
+                        </systemPropertyVariables>
+                    </configuration>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.aspectj</groupId>
+                            <artifactId>aspectjweaver</artifactId>
+                            <version>${aspectj.version}</version>
+                        </dependency>
+                    </dependencies>
+                </plugin>
+                <plugin>
+                    <groupId>org.jooq</groupId>
+                    <artifactId>jooq-codegen-maven</artifactId>
+                    <version>3.13.1</version>
+                    <executions>
+                        <execution>
+                            <id>jooq-codegen</id>
+                            <phase>generate-sources</phase>
+                            <goals>
+                                <goal>generate</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.postgresql</groupId>
+                            <artifactId>postgresql</artifactId>
+                            <version>42.2.11</version>
+                        </dependency>
+                    </dependencies>
+                    <configuration>
+                        <jdbc>
+                            <driver>org.postgresql.Driver</driver>
+                            <url>jdbc:postgresql://xxxdbqa01.corp.test.com:54321/db</url>
+                            <user>u_ec_write</user>
+                            <password>xxxxx</password>
+                        </jdbc>
+                        <!-- Generator parameters -->
+                        <generator>
+                            <database>
+                                <name>org.jooq.meta.postgres.PostgresDatabase</name>
+                                <includes>
+                                    ic_notification.ic_message
+                                    |ic_ports.vlan
+                                </includes>
+                                <includeTables>true</includeTables>
+                                <includeRoutines>false</includeRoutines>
+                                <includePackages>false</includePackages>
+                                <includePackageRoutines>false</includePackageRoutines>
+                                <includePackageUDTs>false</includePackageUDTs>
+                                <includePackageConstants>false</includePackageConstants>
+                                <includeUDTs>false</includeUDTs>
+                                <includeSequences>false</includeSequences>
+                                <includePrimaryKeys>true</includePrimaryKeys>
+                                <includeUniqueKeys>true</includeUniqueKeys>
+                                <includeForeignKeys>false</includeForeignKeys>
+                                <includeCheckConstraints>true</includeCheckConstraints>
+                                <includeIndexes>false</includeIndexes>
+                                <!-- In case your database supports catalogs, e.g. SQL Server:-->
+                                <!-- <inputCatalog>ecxdb</inputCatalog>-->
+
+                                <!--<inputSchema>public</inputSchema>-->
+                            </database>
+                            <generate>
+                                <!-- Primary key / foreign key relations should be generated and used.
+                                This is a prerequisite for various advanced features.
+                                Defaults to true -->
+                                <relations>false</relations>
+
+                                <!-- Generate deprecated code for backwards compatibility
+                                Defaults to true -->
+                                <deprecated>false</deprecated>
+
+                                <!-- Do not reuse this property. It is deprecated as of jOOQ 3.3.0 -->
+                                <instanceFields>false</instanceFields>
+
+                                <!-- Generate the javax.annotation.Generated annotation to indicate
+                                jOOQ version used for source code.
+                                Defaults to true -->
+                                <generatedAnnotation>true</generatedAnnotation>
+
+                                <!-- Generate jOOQ Record classes for type-safe querying. You can
+                                turn this off, if you don't need "active records" for CRUD
+                                Defaults to true -->
+                                <records>true</records>
+
+                                <!-- Generate POJOs in addition to Record classes for usage of the
+                                ResultQuery.fetchInto(Class) API
+                                Defaults to false -->
+                                <pojos>false</pojos>
+
+                                <!-- Generate immutable POJOs for usage of the ResultQuery.fetchInto(Class) API
+                                This overrides any value set in <pojos/>
+                                Defaults to false -->
+                                <immutablePojos>false</immutablePojos>
+
+                                <!-- Generate interfaces that will be implemented by records and/or pojos.
+                                You can also use these interfaces in Record.into(Class<?>) and similar
+                                methods, to let jOOQ return proxy objects for them.
+                                Defaults to false -->
+                                <interfaces>false</interfaces>
+
+                                <!-- Generate DAOs in addition to POJO classes
+                                Defaults to false -->
+                                <daos>true</daos>
+
+                                <!-- Annotate POJOs and Records with JPA annotations for increased
+                                compatibility and better integration with JPA/Hibernate, etc
+                                Defaults to false -->
+                                <jpaAnnotations>true</jpaAnnotations>
+
+                                <!-- Annotate POJOs and Records with JSR-303 validation annotations
+                                Defaults to false -->
+                                <validationAnnotations>true</validationAnnotations>
+
+                                <!-- Annotate DAOs with useful spring annotations such as @Repository or @Autowired
+                                Defaults to false -->
+                                <springAnnotations>false</springAnnotations>
+
+                                <!-- Allow to turn off the generation of global object references, which include
+                                - Tables.java
+                                - Sequences.java
+                                - UDTs.java
+                                Turning off the generation of the above files may be necessary for very
+                                large schemas, which exceed the amount of allowed constants in a class's
+                                constant pool (64k) or, whose static initialiser would exceed 64k of
+                                byte code
+
+                                Defaults to true -->
+                                <globalObjectReferences>true</globalObjectReferences>
+
+                                <!-- Generate fluent setters in
+                                - records
+                                - pojos
+                                - interfaces
+                                Fluent setters are against the JavaBeans specification, but can be quite
+                                useful to those users who do not depend on EL, JSP, JSF, etc.
+
+                                Defaults to false -->
+                                <fluentSetters>false</fluentSetters>
+                            </generate>
+                            <target>
+                                <packageName>database</packageName>
+                                <directory>src/main/java</directory>
+                            </target>
+                        </generator>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>sonar</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <sonar.language>java</sonar.language>
+                <sonar.profile>EC Java</sonar.profile>
+                <sonar.host.url>http:/xxxxsonar01.corp.test.com:9101</sonar.host.url>
+                <sonar.projectName>westmarine:e2e-automation</sonar.projectName>
+                <sonar.coverage.exclusion>**/*</sonar.coverage.exclusion>
+            </properties>
+            <build>
+                <pluginManagement>
+                    <plugins>
+                        <plugin>
+                            <groupId>org.sonarsource.scanner.maven</groupId>
+                            <artifactId>sonar-maven-plugin</artifactId>
+                            <version>3.6.0.1398</version>
+                        </plugin>
+                    </plugins>
+                </pluginManagement>
+            </build>
+        </profile>
+    </profiles>
+
+    <reporting>
+        <excludeDefaults>true</excludeDefaults>
+        <plugins>
+            <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>2.9</version>
+            </plugin>
+        </plugins>
+    </reporting>
+</project>
